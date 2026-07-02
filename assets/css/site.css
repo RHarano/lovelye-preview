@@ -150,6 +150,10 @@ header.solid .burger span{background:var(--ink)}
   filter:url(#sharpen) saturate(1) contrast(1.02) brightness(1.04);transform:scale(1.05)}
 .hero-bg .s2{animation-delay:7s}
 .hero-bg .s3{animation-delay:14s}
+/* per-slide framing (desktop) */
+.hero-bg .s1 img{object-position:center 34%}
+.hero-bg .s2 img{object-position:64% 50%}
+.hero-bg .s3 img{object-position:center 46%}
 @keyframes heroFade{0%{opacity:0}4%{opacity:1}29%{opacity:1}34%{opacity:0}100%{opacity:0}}
 .svg-defs{position:absolute;width:0;height:0;overflow:hidden}
 @media(prefers-reduced-motion:reduce){.hero-bg .hs{transition:none}}
@@ -427,6 +431,8 @@ footer .copy{font-family:var(--jost);font-size:.68rem;letter-spacing:.15em;color
 }
 /* mobile hero/subhero framing — keep subjects in frame */
 @media(max-width:700px){
-  .hero-bg .hs img{object-position:center 28%}
+  .hero-bg .s1 img{object-position:center 40%}
+  .hero-bg .s2 img{object-position:70% 46%}
+  .hero-bg .s3 img{object-position:36% 42%}
   .subhero-bg img{object-position:center 40%}
 }
