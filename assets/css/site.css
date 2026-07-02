@@ -62,7 +62,8 @@ p,.lead,.intro,.poem,.voice p,.faq .a,.frow .txt p,.prof-txt p,.point p,.way p,.
 .shead .num{font-family:var(--jost);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:18px}
 .shead h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,6.2vw,4.6rem);line-height:1;letter-spacing:.01em}
 .shead .jp{font-family:var(--gothic);font-weight:500;font-size:clamp(.86rem,2.3vw,1rem);letter-spacing:.24em;color:var(--muted);margin-top:16px;display:block}
-.center .shead{display:flex;flex-direction:column;align-items:center}
+.center .shead{text-align:center}
+.center .shead h2{display:block}
 
 /* text link */
 .tlink{
@@ -143,9 +144,10 @@ header.solid .burger span{background:var(--ink)}
 /* ---------- hero (home) ---------- */
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;position:relative;overflow:hidden;color:#fff}
 .hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#0c0a07}
-.hero-bg .hs{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;
-  opacity:0;filter:url(#sharpen) saturate(1) contrast(1.02) brightness(1.04);
-  transform:scale(1.05);animation:heroFade 21s infinite;will-change:opacity}
+.hero-bg .hs{position:absolute;inset:0;display:block;width:100%;height:100%;
+  opacity:0;animation:heroFade 21s infinite;will-change:opacity}
+.hero-bg .hs img{width:100%;height:100%;object-fit:cover;object-position:center 42%;
+  filter:url(#sharpen) saturate(1) contrast(1.02) brightness(1.04);transform:scale(1.05)}
 .hero-bg .s2{animation-delay:7s}
 .hero-bg .s3{animation-delay:14s}
 @keyframes heroFade{0%{opacity:0}4%{opacity:1}29%{opacity:1}34%{opacity:0}100%{opacity:0}}
@@ -171,6 +173,7 @@ header.solid .burger span{background:var(--ink)}
 /* ---------- subhero (inner pages) ---------- */
 .subhero{position:relative;min-height:64vh;min-height:64svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
 .subhero-bg{position:absolute;inset:0;z-index:-2}
+.subhero-bg picture{position:absolute;inset:0;display:block;width:100%;height:100%}
 .subhero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%;transform:scale(1.03);filter:url(#sharpen) saturate(.9) contrast(1.03) brightness(.94)}
 .subhero::after{content:"";position:absolute;inset:0;z-index:-1;background:
   linear-gradient(94deg,rgba(14,11,8,.6) 0%,rgba(14,11,8,.28) 36%,rgba(14,11,8,0) 70%),
@@ -416,4 +419,14 @@ footer .copy{font-family:var(--jost);font-size:.68rem;letter-spacing:.15em;color
   .masonry{grid-template-columns:repeat(2,1fr)}
   .prof-fig .sig,.split-fig .cap{font-size:1.05rem;padding:9px 16px}
   .faq summary{font-size:.94rem}
+  .shead h2{font-size:clamp(2.1rem,10.5vw,2.9rem)}
+  .tri{max-width:100%}
+  .tri-card .body{padding:26px 22px}
+  .split .big{font-size:clamp(1.5rem,7vw,2rem)}
+  .cta h2,.dark .shead h2{font-size:clamp(2rem,9.5vw,2.8rem)}
+}
+/* mobile hero/subhero framing — keep subjects in frame */
+@media(max-width:700px){
+  .hero-bg .hs img{object-position:center 28%}
+  .subhero-bg img{object-position:center 40%}
 }
