@@ -431,11 +431,10 @@ footer .copy{font-family:var(--jost);font-size:.68rem;letter-spacing:.15em;color
 }
 /* mobile hero/subhero framing — keep subjects in frame */
 @media(max-width:700px){
-  /* shorter hero on phones = the wide photos show much fuller (less crop) */
-  .hero{min-height:64vh;min-height:64svh}
-  .hero-bg .hs img{transform:scale(1.02)}
-  .hero-bg .s1 img{object-position:55% 45%}
-  .hero-bg .s2 img{object-position:60% 45%}
-  .hero-bg .s3 img{object-position:22% 45%}
+  /* full-height hero kept as-is; frame each photo on one complete subject */
+  .hero-bg .hs img{transform:none}
+  .hero-bg .s1 img{object-position:13% 45%}
+  .hero-bg .s2 img{object-position:70% 45%}
+  .hero-bg .s3 img{object-position:28% 45%}
   .subhero-bg img{object-position:center 40%}
 }
