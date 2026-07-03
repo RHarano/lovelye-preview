@@ -431,10 +431,9 @@ footer .copy{font-family:var(--jost);font-size:.68rem;letter-spacing:.15em;color
 }
 /* mobile hero/subhero framing — keep subjects in frame */
 @media(max-width:700px){
-  /* full-height hero kept as-is; frame each photo on one complete subject */
-  .hero-bg .hs img{transform:none}
-  .hero-bg .s1 img{object-position:13% 45%}
-  .hero-bg .s2 img{object-position:70% 45%}
-  .hero-bg .s3 img{object-position:28% 45%}
+  /* full-height hero kept; zoom each photo so the subject fills the frame (no empty sky/wall) */
+  .hero-bg .s1 img{object-position:16% 48%;transform:scale(1.5)}
+  .hero-bg .s2 img{object-position:70% 45%;transform:scale(1.06)}
+  .hero-bg .s3 img{object-position:30% 44%;transform:scale(1.3)}
   .subhero-bg img{object-position:center 40%}
 }
