@@ -10,7 +10,7 @@ RewriteRule ^order/?$        /order.html       [R=301,L]
 RewriteRule ^sandart/?$      /order.html       [R=301,L]
 RewriteRule ^artist/?$       /artist.html      [R=301,L]
 RewriteRule ^therapist/?$    /therapist.html   [R=301,L]
-RewriteRule ^salon/?$        /#salon       [R=301,L,NE]
+RewriteRule ^salon/?$        /salon.html   [R=301,L]
 RewriteRule ^shield-?art/?$  /#shieldart   [R=301,L,NE]
 </IfModule>
 
